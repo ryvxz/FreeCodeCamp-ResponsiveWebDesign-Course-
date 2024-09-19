@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Form about Cars</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Survey Form about Cars</h1>
+    <p id="description">Please fill out this survey form about your driving experience.</p>
+    <form id="survey-form">
+      <fieldset>
+        <label id="name-label" for="name">Enter Your Name: <input id="name" name="name" type="text" required placeholder="Enter your name" /></label>
+        <label id="email-label" for="email">Enter Your Email: <input id="email" name="email" type="email" required placeholder="Enter your email" /></label>
+        <label id="number-label" for="number">Enter Your Age: <input id="number" name="age" type="number" min="18" max="99" required placeholder="Enter your age" /></label>
+      </fieldset>
+      <fieldset>
+        <legend>Do you drive a manual or an automatic?</legend>
+        <label for="dropdown">
+          <select id="dropdown" name="transmission" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="manual">Manual</option>
+            <option value="automatic">Automatic</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Are you satisfied with your car? (required)</legend>
+        <label for="satisfaction-satisfied"><input id="satisfaction-satisfied" type="radio" name="satisfaction" class="inline" value="satisfied" required /> Yes</label>
+        <label for="satisfaction-neutral"><input id="satisfaction-neutral" type="radio" name="satisfaction" class="inline" value="neutral" /> It's okay</label>
+        <label for="satisfaction-dissatisfied"><input id="satisfaction-dissatisfied" type="radio" name="satisfaction" class="inline" value="dissatisfied" /> No</label>
+      </fieldset>
+      <fieldset>
+        <label for="driving-dislikes">What do you hate about driving? (Check all that apply)</label>
+        <label for="traffic"><input id="traffic" type="checkbox" name="driving-dislikes" class="inline" value="traffic" /> Traffic</label>
+        <label for="gas-prices"><input id="gas-prices" type="checkbox" name="driving-dislikes" class="inline" value="gas-prices" /> Gas Prices</label>
+        <label for="toll-fees"><input id="toll-fees" type="checkbox" name="driving-dislikes" class="inline" value="toll-fees" /> Toll Fees</label>
+      </fieldset>
+      <fieldset>
+        <label for="comments">Any additional comments about your driving experience:
+          <textarea id="comments" name="comments" rows="3" cols="30" placeholder="Enter your comments here"></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="Submit" id="submit" />
+    </form>
+  </body>
+</html>
